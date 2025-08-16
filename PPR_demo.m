@@ -8,6 +8,7 @@ stim = stim(9:24,9:24,1:5000); % use smaller stimuli for faster demo
 FiringRate=50;
 FrameRate=20;
 [resp, rf1, rf2] = Model_Neuron_V1( stim, 'complex', FiringRate, FrameRate ); 
+resp = resp';
 fprintf('total spikes %f\n',sum(resp));
 
 %% compute PPR
