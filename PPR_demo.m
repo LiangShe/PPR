@@ -24,4 +24,6 @@ for i=1:length(lamda)
 end
 
 %% view results
-% TODO
+models = compute_validation_and_test_ccs(outputpath, stim, resp);
+model_best = find_the_best_model( models, stim, resp);
+Figure_PPR4_results(model_best)
